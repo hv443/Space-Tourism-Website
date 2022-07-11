@@ -8,4 +8,79 @@ body {
 
 main {
   margin-top: 5rem;
+
+  @include flex(flex-start, space-between);
+  flex-direction: column;
+}
+
+.content {
+  @include flex(flex-start, center);
+
+  margin-top: 2rem;
+
+  img {
+    width: 80%;
+  }
+}
+
+.textContent {
+  flex: 1;
+}
+
+.destinationNavigation {
+  @include flex(center, space-between);
+  width: 50%;
+
+  flex: 1;
+
+  li {
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-size: var(--navText);
+    a {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+.text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 3rem;
+  margin-bottom: 1rem;
+  width: 80%;
+
+  .title {
+    margin-top: 1rem;
+  }
+}
+
+.avgDistance {
+  @include flex(flex-start, flex-start);
+}
+
+.avg,
+.estTime {
+  @include flex(flex-start, center);
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.timeTravel,
+.distance {
+  font-size: var(--subheading1);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.active-nav {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--extra-light);
+    left: 0;
+    bottom: 0;
+  }
 }

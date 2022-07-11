@@ -21,7 +21,7 @@
     --heading5: 20px;
     --subheading1: 28px;
     --subheading2: 14px;
-    --newText: 16px;
+    --navText: 16px;
   }
 }
 
@@ -29,6 +29,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -79,6 +85,7 @@ body {
 
 a {
   color: var(--extra-light);
+  text-decoration: none;
 }
 
 .btn,
@@ -123,7 +130,7 @@ header nav::after {
   content: "";
   height: 1px;
   position: absolute;
-  width: 45%;
+  width: 50%;
   left: 8%;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -152,7 +159,7 @@ header nav ul li a:hover:after {
   width: 100%;
   height: 3px;
   left: 0;
-  background-color: var(--extra-light);
+  background-color: var(--light);
   bottom: -1rem;
 }
 header nav ul li a .num {
@@ -166,7 +173,7 @@ main {
   width: 75%;
   margin: 10rem auto;
 }
-main .para {
+main .paraText {
   width: 45%;
 }
 main .explore-btn button {

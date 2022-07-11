@@ -21,7 +21,7 @@
     --heading5: 20px;
     --subheading1: 28px;
     --subheading2: 14px;
-    --newText: 16px;
+    --navText: 16px;
   }
 }
 
@@ -29,6 +29,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -79,6 +85,7 @@ body {
 
 a {
   color: var(--extra-light);
+  text-decoration: none;
 }
 
 .btn,

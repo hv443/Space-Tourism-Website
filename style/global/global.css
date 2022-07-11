@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&display=swap");
+:root {
+  --heading1: 150px;
+  --heading2: 100px;
+  --heading3: 56px;
+  --heading4: 32px;
+  --heading5: 20px;
+  --subheading1: 28px;
+  --subheading2: 14px;
+  --newText: 16px;
+  --dark: #0b0d17;
+  --light: #d0d6f9;
+  --extra-light: #ffffff;
+}
+@media (max-width: 500px) {
+  :root {
+    --heading1: 150px;
+    --heading2: 100px;
+    --heading3: 56px;
+    --heading4: 32px;
+    --heading5: 20px;
+    --subheading1: 28px;
+    --subheading2: 14px;
+    --newText: 16px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: barlow condensed, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.extra-light {
+  color: var(--extra-light);
+}
+
+.light {
+  color: var(--light);
+}
+
+.heading {
+  font-family: bellefair, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.heading1 {
+  font-size: var(--heading1);
+}
+
+.heading2 {
+  font-size: var(--heading2);
+}
+
+.heading3 {
+  font-size: var(--heading3);
+}
+
+.heading4 {
+  font-size: var(--heading4);
+}
+
+.heading5 {
+  font-size: var(--heading5);
+  letter-spacing: 4.75px;
+  font-family: barlow condensed, sans-serif;
+}
+
+.para {
+  color: var(--light);
+}
+
+a {
+  color: var(--extra-light);
+}
+
+.btn,
+.dark {
+  color: var(--dark);
+}
+
+button {
+  font-family: bellefair, sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: var(--extra-light);
+  bottom: -1rem;
+}/*# sourceMappingURL=global.css.map */

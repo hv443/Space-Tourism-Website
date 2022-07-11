@@ -1,0 +1,11 @@
+@import "../global/global.scss";
+@import "../mixin";
+@import "../index/index.scss";
+
+body {
+  background-image: url("../../starter-code/assets/destination/background-destination-desktop.jpg");
+}
+
+main {
+  margin-top: 5rem;
+}

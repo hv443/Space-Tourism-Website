@@ -5,3 +5,67 @@
 body {
   background-image: url("../../starter-code/assets/crew/background-crew-desktop.jpg");
 }
+
+main {
+  margin-top: 2rem;
+  width: 80%;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  .text-content {
+    @include flex(flex-start, space-between);
+    flex-direction: column;
+    height: 70%;
+  }
+
+  .crew-title {
+    margin-bottom: 5rem;
+  }
+}
+
+.crew__details {
+  .role,
+  .crew-name {
+    text-transform: uppercase;
+  }
+
+  .crew-name {
+    margin-bottom: 1rem;
+  }
+
+  .crew-bio {
+    width: 70%;
+  }
+}
+
+.crew-image {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.crew-navigation {
+  @include flex(flex-end, flex-start);
+
+  li {
+    margin: 1rem 1rem 0 0;
+    cursor: pointer;
+    &:hover {
+      & > svg > circle {
+        fill: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+.active-crew {
+  circle {
+    fill: white;
+  }
+}

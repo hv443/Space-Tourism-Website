@@ -27,10 +27,10 @@ header {
 
     ul {
       @include flex(center, space-around);
-      padding: 1rem 6rem 1rem 4rem;
+      padding: 1.2rem 6rem 1.2rem 4rem;
       text-transform: uppercase;
-      background-color: rgba(255, 255, 255, 0.399);
-      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
 
       li {
         list-style: none;
@@ -40,6 +40,7 @@ header {
           color: var(--extra-light);
           letter-spacing: 2px;
           position: relative;
+          font-weight: 400;
 
           &:hover:after {
             content: "";
@@ -48,7 +49,7 @@ header {
             height: 3px;
             left: 0;
             background-color: var(--light);
-            bottom: -1rem;
+            bottom: -1.2rem;
           }
 
           .num {
@@ -61,13 +62,14 @@ header {
 }
 
 main {
-  @include flex(flex-end, space-between);
+  @include flex(center, space-between);
 
   width: 75%;
-  margin: 10rem auto;
+  margin: 10rem auto 0 auto;
 
-  .paraText {
-    width: 45%;
+  .para-text {
+    width: 50%;
+    line-height: 1.5rem;
   }
 
   .explore-btn {
@@ -84,5 +86,17 @@ main {
         box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2);
       }
     }
+  }
+}
+
+.active {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: var(--extra-light);
+    bottom: -1.2rem;
   }
 }

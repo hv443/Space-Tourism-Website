@@ -39,7 +39,7 @@ li {
 }
 
 body {
-  font-family: barlow condensed, sans-serif;
+  font-family: "barlow condensed", sans-serif;
   font-size: 16px;
   font-weight: 300;
 }
@@ -100,14 +100,14 @@ button {
   color: inherit;
 }
 
-.active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  background-color: var(--extra-light);
-  bottom: -1rem;
+.description {
+  line-height: 1.5rem;
+  width: 80%;
+}
+
+.title-num {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 :root {
@@ -149,7 +149,7 @@ li {
 }
 
 body {
-  font-family: barlow condensed, sans-serif;
+  font-family: "barlow condensed", sans-serif;
   font-size: 16px;
   font-weight: 300;
 }
@@ -210,14 +210,14 @@ button {
   color: inherit;
 }
 
-.active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  background-color: var(--extra-light);
-  bottom: -1rem;
+.description {
+  line-height: 1.5rem;
+  width: 80%;
+}
+
+.title-num {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -249,10 +249,10 @@ header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 1rem 6rem 1rem 4rem;
+  padding: 1.2rem 6rem 1.2rem 4rem;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.399);
-  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 header nav ul li {
   list-style: none;
@@ -263,6 +263,7 @@ header nav ul li a {
   color: var(--extra-light);
   letter-spacing: 2px;
   position: relative;
+  font-weight: 400;
 }
 header nav ul li a:hover:after {
   content: "";
@@ -271,7 +272,7 @@ header nav ul li a:hover:after {
   height: 3px;
   left: 0;
   background-color: var(--light);
-  bottom: -1rem;
+  bottom: -1.2rem;
 }
 header nav ul li a .num {
   font-weight: 600;
@@ -279,13 +280,14 @@ header nav ul li a .num {
 
 main {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 75%;
-  margin: 10rem auto;
+  margin: 10rem auto 0 auto;
 }
-main .paraText {
-  width: 45%;
+main .para-text {
+  width: 50%;
+  line-height: 1.5rem;
 }
 main .explore-btn button {
   font-size: var(--heading4);
@@ -298,6 +300,16 @@ main .explore-btn button {
 }
 main .explore-btn button:hover {
   box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2);
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: var(--extra-light);
+  bottom: -1.2rem;
 }
 
 body {
@@ -342,6 +354,15 @@ main {
   position: relative;
   padding-bottom: 0.5rem;
 }
+.destinationNavigation li a:hover::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--light);
+  left: 0;
+  bottom: 0;
+}
 
 .text {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -375,6 +396,10 @@ main {
   margin-top: 1rem;
 }
 
+.active-nav {
+  font-weight: 500;
+  color: var(--extra-light);
+}
 .active-nav::after {
   content: "";
   position: absolute;

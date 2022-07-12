@@ -3,5 +3,74 @@
 @import "../index/index.scss";
 
 body {
-  background-image: url("../../starter-code/assets/home/background-home-desktop.jpg");
+  background-image: url("../../starter-code/assets/technology/background-technology-desktop.jpg");
+}
+
+main {
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+  place-items: end;
+  width: 100%;
+
+  .wrapper {
+    width: 90%;
+  }
+}
+
+.crew-title {
+  margin-bottom: 1rem;
+}
+
+.content {
+  @include flex(center, space-between);
+}
+
+.text-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-self: initial;
+
+  .nav {
+    display: grid;
+    place-items: center;
+    margin-right: 2rem;
+
+    .nav-num {
+      padding: 0 1em;
+      border-radius: 50%;
+      border: 1px solid var(--light);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .tech-details {
+    .pre-text {
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-name {
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-description {
+      width: 70%;
+    }
+  }
+}
+
+.tech-image {
+  width: 80%;
+  margin-left: 5rem;
+  img {
+    width: 100%;
+  }
+}
+
+.active-tech {
+  background-color: var(--extra-light);
+  color: var(--dark);
+  border: 1px solid var(--dark);
 }

@@ -9,6 +9,7 @@ let technologyDescription = [];
 let crewBio = [];
 let crewImage = [];
 let technologyImages = [];
+let technologyImagesMobile = [];
 let destinationImage = [];
 let destinationDistance = [];
 let destinationTravel = [];
@@ -37,6 +38,7 @@ fetch("./data.json")
       technologyName.push(element.name);
       technologyDescription.push(element.description);
       technologyImages.push(element.images.portrait);
+      technologyImagesMobile.push(element.images.landscape);
     });
   })
   .then(() => {
@@ -143,13 +145,15 @@ fetch("./data.json")
 
     let tech_name = document.querySelector(".tech-name");
     let tech_description = document.querySelector(".tech-description");
-    let tech_image = document.querySelector(".tech-image");
+    let tech_image_desktop = document.querySelector(".desktop");
+    let tech_image_mobile = document.querySelector(".mobile");
     let navBtn = document.querySelectorAll(".nav-num");
 
     for (i = 0; i <= navBtn.length - 1; i++) {
       tech_name.innerHTML = technologyName[0];
       tech_description.innerHTML = technologyDescription[0];
-      tech_image.innerHTML = `<img src="${technologyImages[0]}">`;
+      tech_image_desktop.innerHTML = `<img src="${technologyImages[0]}">`;
+      tech_image_mobile.innerHTML = `<img src="${technologyImagesMobile[0]}">`;
     }
 
     navBtn.forEach((e) => {
@@ -166,16 +170,34 @@ fetch("./data.json")
         if (e.innerHTML === "1") {
           tech_name.innerHTML = technologyName[0];
           tech_description.innerHTML = technologyDescription[0];
-          tech_image.innerHTML = `<img src="${technologyImages[0]}">`;
+          tech_image_desktop.innerHTML = `<img src="${technologyImages[0]}">`;
+          tech_image_mobile.innerHTML = `<img src="${technologyImagesMobile[0]}">`;
         } else if (e.innerHTML === "2") {
           tech_name.innerHTML = technologyName[1];
           tech_description.innerHTML = technologyDescription[1];
-          tech_image.innerHTML = `<img src="${technologyImages[1]}">`;
+          tech_image_desktop.innerHTML = `<img src="${technologyImages[1]}">`;
+          tech_image_mobile.innerHTML = `<img src="${technologyImagesMobile[1]}">`;
         } else {
           tech_name.innerHTML = technologyName[2];
           tech_description.innerHTML = technologyDescription[2];
-          tech_image.innerHTML = `<img src="${technologyImages[2]}">`;
+          tech_image_desktop.innerHTML = `<img src="${technologyImages[2]}">`;
+          tech_image_mobile.innerHTML = `<img src="${technologyImagesMobile[2]}">`;
         }
       });
     });
   });
+
+let menuBtn = document.querySelector(".menu-btn");
+let mobileMenu = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+  const visibility = menuBtn.getAttribute("data-visibility");
+  if (visibility == "false") {
+    mobileMenu.setAttribute("aria-expanded", "true");
+    menuBtn.setAttribute("data-visibility", "true");
+    console.log(visibility);
+  } else {
+    mobileMenu.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("data-visibility", "false");
+  }
+});

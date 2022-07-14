@@ -12,16 +12,16 @@
   --light: #d0d6f9;
   --extra-light: #ffffff;
 }
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   :root {
-    --heading1: 150px;
-    --heading2: 100px;
-    --heading3: 56px;
-    --heading4: 32px;
-    --heading5: 20px;
-    --subheading1: 28px;
-    --subheading2: 14px;
-    --navText: 16px;
+    --heading1: 80px;
+    --heading2: 54px;
+    --heading3: 30px;
+    --heading4: 18px;
+    --heading5: 12px;
+    --subheading1: 16px;
+    --subheading2: 12px;
+    --navText: 10px;
   }
 }
 

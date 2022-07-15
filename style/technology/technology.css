@@ -346,7 +346,7 @@ main .explore-btn button:hover {
   body {
     background-image: url("../../starter-code/assets/home/background-home-mobile.jpg");
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   header .nav-links {
     position: fixed;

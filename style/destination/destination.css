@@ -246,7 +246,7 @@ header nav::after {
 header nav .nav-links {
   padding: 1.2rem 6rem 1.2rem 4rem;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.563);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 }
 header nav ul {
@@ -322,6 +322,9 @@ main .explore-btn button:hover {
   }
   header img {
     padding: 1rem;
+  }
+  header nav .nav-links {
+    padding: 0;
   }
   header nav::after {
     display: none;
@@ -556,5 +559,48 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    background-image: url("../../starter-code/assets/destination/background-destination-mobile.jpg");
+    height: auto;
+  }
+  .destinationNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .destinationNavigation li {
+    margin: 0;
+  }
+  .text .description {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .avgDistance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .avg,
+.estTime {
+    margin: 0;
+  }
+  .avg > p:first-of-type,
+.estTime > p:first-of-type {
+    margin-bottom: 0.2rem;
+  }
+  .avg .distance,
+.avg .timeTravel,
+.estTime .distance,
+.estTime .timeTravel {
+    margin: 0;
+  }
+  .estTime {
+    margin-top: 1rem;
   }
 }/*# sourceMappingURL=destination.css.map */

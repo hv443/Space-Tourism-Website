@@ -143,3 +143,21 @@ main {
     }
   }
 }
+
+@media (max-width: 450px) {
+  body {
+    background-image: url("../../starter-code/assets/technology/background-technology-mobile.jpg");
+  }
+
+  .crew-title {
+    text-align: center;
+  }
+
+  .text-content {
+    .tech-details {
+      .tech-description {
+        width: 80%;
+      }
+    }
+  }
+}

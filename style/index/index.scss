@@ -25,7 +25,7 @@ header {
     .nav-links {
       padding: 1.2rem 6rem 1.2rem 4rem;
       text-transform: uppercase;
-      background-color: rgba(0, 0, 0, 0.563);
+      background-color: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(10px);
     }
 
@@ -115,6 +115,9 @@ main {
     }
 
     nav {
+      .nav-links {
+        padding: 0;
+      }
       &::after {
         display: none;
       }

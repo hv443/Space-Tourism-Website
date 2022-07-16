@@ -246,7 +246,7 @@ header nav::after {
 header nav .nav-links {
   padding: 1.2rem 6rem 1.2rem 4rem;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.563);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 }
 header nav ul {
@@ -322,6 +322,9 @@ main .explore-btn button:hover {
   }
   header img {
     padding: 1rem;
+  }
+  header nav .nav-links {
+    padding: 0;
   }
   header nav::after {
     display: none;
@@ -531,5 +534,16 @@ main .wrapper {
   }
   .tech-image img {
     width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    background-image: url("../../starter-code/assets/technology/background-technology-mobile.jpg");
+  }
+  .crew-title {
+    text-align: center;
+  }
+  .text-content .tech-details .tech-description {
+    width: 80%;
   }
 }/*# sourceMappingURL=technology.css.map */

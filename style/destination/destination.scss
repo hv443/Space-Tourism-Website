@@ -156,3 +156,48 @@ main {
     @include flex(center, center);
   }
 }
+
+@media (max-width: 450px) {
+  body {
+    background-image: url("../../starter-code/assets/destination/background-destination-mobile.jpg");
+    height: auto;
+  }
+
+  .destinationNavigation {
+    @include flex(center, space-around);
+    width: 80%;
+    margin: 0 auto;
+    li {
+      margin: 0;
+    }
+  }
+
+  .text {
+    .description {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  .avgDistance {
+    @include flex(center, center);
+    flex-direction: column;
+  }
+
+  .avg,
+  .estTime {
+    margin: 0;
+
+    & > p:first-of-type {
+      margin-bottom: 0.2rem;
+    }
+
+    .distance,
+    .timeTravel {
+      margin: 0;
+    }
+  }
+  .estTime {
+    margin-top: 1rem;
+  }
+}
